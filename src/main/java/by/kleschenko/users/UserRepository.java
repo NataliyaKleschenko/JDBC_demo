@@ -23,11 +23,7 @@ public class UserRepository implements UserCRUDInterface<User, String> {
         } catch (SQLException e) {
             throw new Exception("User not created", e);
         } finally {
-            try {
-                closeConnection();
-            } catch (SQLException e) {
-                throw new Exception("Unable to close connection", e);
-            }
+            closeConnection();
         }
     }
 
@@ -47,11 +43,7 @@ public class UserRepository implements UserCRUDInterface<User, String> {
         } catch (SQLException e) {
             throw new Exception("Failed to read user", e);
         } finally {
-            try {
-                closeConnection();
-            } catch (SQLException e) {
-                throw new Exception("Unable to close connection", e);
-            }
+            closeConnection();
         }
     }
 
@@ -73,11 +65,7 @@ public class UserRepository implements UserCRUDInterface<User, String> {
         } catch (SQLException e) {
             throw new Exception("Failed to read users", e);
         } finally {
-            try {
-                closeConnection();
-            } catch (SQLException e) {
-                throw new Exception("Unable to close connection", e);
-            }
+            closeConnection();
         }
     }
 
@@ -92,11 +80,7 @@ public class UserRepository implements UserCRUDInterface<User, String> {
         } catch (SQLException e) {
             throw new Exception("User not deleted", e);
         } finally {
-            try {
-                closeConnection();
-            } catch (SQLException e) {
-                throw new Exception("Unable to close connection", e);
-            }
+            closeConnection();
         }
     }
 
@@ -112,11 +96,7 @@ public class UserRepository implements UserCRUDInterface<User, String> {
         } catch (SQLException e) {
             throw new Exception("User not updated", e);
         } finally {
-            try {
-                closeConnection();
-            } catch (SQLException e) {
-                throw new Exception("Unable to close connection", e);
-            }
+            closeConnection();
         }
     }
 }
